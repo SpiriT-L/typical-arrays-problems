@@ -15,5 +15,9 @@ exports.max = function max(array) {
 };
 
 exports.avg = function avg(array) {
-    return 0;
+    if (arguments.length === 0 || array.length === 0) {
+        return 0;
+    } else {
+        return array.reduce((sum, current) => sum + current, 0) / array.length;
+    }
 };
